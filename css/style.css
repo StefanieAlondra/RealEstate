@@ -1,0 +1,593 @@
+    /*#site-header{
+    background-color: peachpuff;
+}
+.rosita{
+ color: rgb(110, 18, 95);
+}
+
+.mayusculas{
+text-transform: uppercase;
+}*/
+    
+    html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+        /** reset para REMS -62.5%= 10PX DE 16PX **/
+    }
+    
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+    
+    body {
+        font-family: 'Lato', sans-serif;
+        /*fuente */
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    /*  Global */
+    
+    img {
+        max-width: 100%;
+        /*  afecta todas las imagenes y las hace responsivas  */
+    }
+    
+    .contenedor {
+        width: 95%;
+        /*para impedir que choque en las orillas */
+        max-width: 120rem;
+        margin: 0 auto;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    h2 {
+        font-size: 3rem;
+    }
+    
+    h3 {
+        font-size: 2.9rem;
+    }
+    
+    h4 {
+        font-size: 2.4rem;
+    }
+    /*utilidades*/
+    
+    .seccion {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        /* espacios al rededor de la 2a secc */
+    }
+    
+    .fw-300 {
+        font-weight: 300;
+    }
+    
+    .centrar-texto {
+        text-align: center;
+        line-height: 3rem;
+        /* interlineado */
+    }
+    
+    .d-block {
+        display: block!important;
+        /* el boton se extiende en todo su espacio*/
+    }
+    
+    .contenido-centrado {
+        max-width: 70rem;
+        text-align: justify
+    }
+    /*BOTONES*/
+    /*
+@media (min-width: 7680px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}*/
+    
+    .boton {
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1.8rem;
+        padding: 1rem 3rem;
+        margin-top: 3rem;
+        /*width: 10px;*/
+        display: inline-block;
+        /*permite darle el tamano que quieras pero no el que quiera in el inline*/
+        text-align: center;
+        border: none;
+        /**display: block;
+    flex: 0 0 100%;**/
+    }
+    
+    .boton:hover {
+        cursor: pointer;
+        /*pone una mano sobre el boton*/
+    }
+    
+    .boton-amarillo {
+        background-color: #E08709;
+    }
+    
+    .boton-verde {
+        background-color: #71B100;
+    }
+    /*header*/
+    
+    .site-header {
+        background-color: #333333;
+        padding: 1rem 0 3rem 0;
+    }
+    
+    .site-header.inicio {
+        background-image: url(../img/header.jpg);
+        /*imagen */
+        background-position: center center;
+        /*imagen desde su centro y se expande */
+        background-size: cover;
+        /*forza que la img se adapte a la pantalla*/
+        height: 120vh;
+        /*altura de la pantalla */
+        min-height: 60rem;
+        /*altura minima*/
+    }
+    /*  Global */
+    
+    .contenido-header {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        /* posiciona el contenido e arriba abajo */
+        justify-content: space-between;
+        /* uno arriba y otro abahjo */
+        text-align: center;
+    }
+    
+    @media (min-width: 768px) {
+        .contenido-header {
+            text-align: left;
+        }
+    }
+    
+    .contenido-header h1 {
+        color: white;
+        padding-bottom: 3rem;
+        max-width: 70rem;
+        /* salto de linea */
+        line-height: 2;
+        /* interlineado */
+        margin-top: 10rem;
+        /* extrta*/
+        margin-bottom: 5rem;
+    }
+    
+    @media (min-width:768px) {
+        .barra {
+            display: flex;
+            justify-content: space-between;
+            /* alineacion horizontaluno de un lado iz y otro del derecho */
+            align-items: center;
+            /*   flex-.. aline el texto del logo y navega alineacion vertical =*/
+        }
+    }
+    
+    .barra {
+        padding-top: 3rem;
+        /*  espacio en el titulo*/
+        margin-right: 2rem;
+    }
+    /*  Navegacion  */
+    
+    .navegacion a {
+        color: white;
+        text-decoration: none;
+        /* linea abajo */
+        font-size: 1.8rem;
+        display: block;
+        padding: 1rem;
+    }
+    
+    @media (min-width: 768px) {
+        .navegacion a {
+            display: inline-block;
+            margin-right: 2rem;
+            font-size: 2.5rem;
+        }
+        .navegacion a:last-of-type {
+            margin: 0;
+            /* elimina el espacio final del ultimo elemento*/
+        }
+    }
+    
+    .navegacion a:hover {
+        color: rgb(228, 214, 188);
+        /* cambia e color bajo el curosor de letras  */
+    }
+    /** iconis nosotros*/
+    
+    @media (min-width: 768px) {
+        .iconos-nosotros {
+            display: flex;
+            /** despliega horizontalmente los iconos*/
+            justify-content: space-between;
+        }
+    }
+    
+    .iconos {
+        text-align: center;
+    }
+    
+    @media (min-width: 768px) {
+        .icono {
+            flex-basis: calc(33.3% - 1rem);
+            /** divide en 3 partes menos el espacio */
+        }
+    }
+    
+    .icono h3 {
+        text-transform: uppercase;
+    }
+    /**anuncios*/
+    
+    @media (min-width: 768px) {
+        .contenedor-anuncios {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+    
+    .anuncio {
+        border-style: solid;
+        border-color: #B5B5B5;
+        border-width: .1rem;
+        background-color: #F5F5F5;
+        margin-bottom: 2rem;
+    }
+    
+    @media (min-width: 768px) {
+        .anuncio {
+            /*flex:0 0 calc(33.3% -1 rem); nojala pero es en el orden de abajo*/
+            flex-grow: 0;
+            /* permite que el contenido se mas grande si es posible*/
+            flex-shrink: 0;
+            /* permite que el contenido se mas pequeno si es posible */
+            flex-basis: calc(33.3% - 1rem);
+            /*border: 10px solid b5b5b5;*/
+        }
+    }
+    
+    .contenido-anuncio {
+        padding: 2rem;
+        /*margen de las letras auque se puede hacer de cada lado */
+        line-height: 3rem;
+        text-align: left;
+        /*padding-top: 2rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;*/
+    }
+    
+    .contenido-anuncio h3 {
+        margin: 0;
+    }
+    
+    .contenido-anuncio p {
+        margin: 1.5rem;
+    }
+    
+    .precio {
+        color: #71B100;
+        font-weight: 700;
+    }
+    
+    .ver-todas {
+        display: flex;
+        justify-content: flex-end;
+        /*manda el boton a la derecha*/
+    }
+    /*contacto home*/
+    
+    .imagen-contacto {
+        background-image: url(../img/encuentra.jpg);
+        background-position: center center;
+        background-size: cover;
+        height: 40rem;
+        /*altura de la imagen*/
+        display: flex;
+        align-items: center;
+        /*centra verticalmente*/
+    }
+    
+    .contenido-contacto {
+        flex: 0 0 95%;
+        /*para que no tome todo el espacio disponible*/
+        /* toma el total de pixeles y lo divide entre los elementos*/
+        color: white;
+    }
+    
+    .contenido-contacto p {
+        font-size: 1.8rem;
+    }
+    /*icinos de los anuncios*/
+    
+    .iconos-caracteristicas {
+        list-style: none;
+        /*quita la viñeta*/
+        padding: 0;
+        /* espacio al rededor*/
+        display: flex;
+        /*  ordela horizontal  */
+        justify-content: space-evenly;
+        /* justificacion*/
+        max-width: 50rem;
+        flex: 1;
+        /* permite que el contenido se extienda,las figuritas se habia hecho peques y el precio en anuncio*/
+    }
+    
+    .iconos-caracteristicas li {
+        /*flex: 1; separa todos los iconos*/
+        display: flex;
+        /*  ordela horizontal lois numeros  */
+    }
+    
+    .iconos-caracteristicas li img {
+        margin-right: 1rem;
+    }
+    /*seccion inferior*/
+    
+    @media (min-width: 768px) {
+        .seccion-inferior {
+            display: flex;
+            justify-content: space-between;
+        }
+        .seccion-inferior .blog {
+            flex-basis: 60%;
+        }
+        .seccion-inferior .testimoniales {
+            flex-basis: calc(40% - 2rem);
+        }
+    }
+    
+    .entrada-blog {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        /*separacion hacia abajo de cada elememnto */
+    }
+    /**@media (min-width: 768px) {
+    
+    .entrada-blog {
+        display: flex;
+        justify-content: space-between;}}
+     si pones esta y en el de arriba quitas las mismas las imagenes se haran ma sgrandes 
+    
+*/
+    
+    .entrada-blog .imagen {
+        flex-basis: 40%;
+        /* hace mas pequena la iamgen*/
+    }
+    
+    .entrada-blog :last-of-type {
+        margin-bottom: 0;
+        /*borra la framja naranja de abajo dela ultima g=foto del blog */
+    }
+    
+    .texto-entrada a {
+        padding: 2rem;
+        color: black;
+        /* negritas el enlace del titulo de bblog*/
+        text-decoration: none;
+        /* subrayado del enlace*/
+    }
+    
+    .entrada-blog .texto-entrada {
+        flex-basis: calc(60% - 3rem);
+        /*separacion texto imagen*/
+    }
+    
+    .texto-entrada h4 {
+        margin: 0;
+        /* elimina el margen del texto en la parte superior*/
+        line-height: 1.2;
+    }
+    
+    .texto-entrada h4::after {
+        content: '';
+        display: block;
+        /* para que tenga un espacio definido*/
+        width: 15rem;
+        height: .5rem;
+        background-color: #71B100;
+        margin-top: 1rem;
+    }
+    /*creame un pseudoelemento despues del h4 que es una linea verde */
+    
+    .texto-entrada span {
+        color: #E08709;
+        /* cambio de color a fecha y autor*/
+    }
+    /* testimonial*/
+    
+    .testimonial {
+        background-color: #71B100;
+        /*fondo*/
+        font-size: 2.4rem;
+        /* letra tamano*/
+        padding: 2rem;
+        /* espacio hacia adentro*/
+        color: white;
+        /* colo letra*/
+        /*border-radius: 2rem; /* bordes redondos y puedes hacer circulo80%*/
+        border-top-right-radius: 2rem;
+        /**/
+    }
+    
+    .testimonial p {
+        text-align: right;
+    }
+    
+    .testimonial blockquote::before {
+        /* before crea elemento antes del contenido  */
+        content: '';
+        /*espacio disponible */
+        background-image: url(../img/comilla.svg);
+        /*importa la imagen */
+        width: 4rem;
+        /* le da ancho y alto */
+        height: 4rem;
+        position: absolute;
+        /* hijo*/
+        left: -2rem;
+        /* se posisciona 20px hacia atras del texto  */
+    }
+    /* display: block; /*genera el espacio */
+    
+    .testimonial blockquote {
+        position: relative;
+        /* padre */
+        padding-left: 5rem;
+        font-weight: 300;
+    }
+    /* footer*/
+    
+    .site-footer {
+        background-color: #333333;
+        /*color gris */
+        margin: 0;
+        /* margen hasta bajo */
+    }
+    
+    .contenedor-footer {
+        padding: 3rem 0;
+        /*separacvion arriba y abajo de la navegacion abajo */
+        text-align: center;
+    }
+    
+    @media (min-width: 768px) {
+        .contenedor-footer {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    
+    .site-footer nav {
+        display: none;
+        /*elimina la nav cuando esta chiquito*/
+    }
+    
+    @media (min-width: 768px) {
+        .site-footer nav {
+            display: block;
+        }
+    }
+    
+    .copyright {
+        margin: 0;
+        color: white;
+    }
+    /* paginas internas ;;;;;;;;;;;;;;;;;;;;*/
+    /* NOSOTROS */
+    
+    @media (min-width: 768px) {
+        .contenido-nosotros {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* divide la informacion en dos columnas si no funciona trata con otra instruccion
+        el numero de valores depende de el numero de columnas y debe ser igual al numero de hijos  50%  50% repear(2 50%)*/
+            grid-column-gap: 2rem;
+            /* espacio entre las columnas*/
+        }
+    }
+    
+    .texto-nosotros blockquote {
+        font-weight: 900;
+        font-size: 2rem;
+        margin: 0;
+        padding: 1rem 0 3rem 0;
+    }
+    /* ANUNCIO*/
+    
+    .resumen-propiedad {
+        display: flex;
+        justify-content: space-between;
+        /* formato horizontal a las cosas que estan bajo la imagen*/
+        align-content: space-between;
+        /* alinea vertivalmente el precio*/
+    }
+    /* CONTACTO*/
+    /**/
+    
+    .contacto p {
+        font-size: 1.3rem;
+        color: silver;
+        margin: 0;
+    }
+    
+    legend {
+        font-size: 1.6rem;
+        color: silver;
+        margin-bottom: 1rem;
+    }
+    
+    label {
+        font-weight: 700;
+        text-transform: uppercase;
+        display: block;
+        /*garantiza que no se encimen*/
+    }
+    /*input[type="text"],
+input[type="email"],
+input[type="tel"]{
+   padding: 1rem; espacio
+   display: block; spacio disponible completo 
+   width: 100%; forzamos que mida 100%
+   background-color: #e1e1e1;
+   margin-bottom: 2rem;espacio abajo
+   border: none;
+   border-radius: 1rem;/*bordes*/
+    
+    input:not([type="submit"]),
+    textarea,
+    select {
+        padding: 1rem;
+        display: block;
+        width: 100%;
+        background-color: #e1e1e1;
+        margin-bottom: 2rem;
+        border: none;
+        border-radius: 1rem;
+    }
+    
+    input[type="radio"] {
+        width: auto;
+        /* toma solo el espacio que ocupa es decir el puntito*/
+    }
+    
+    select {
+        -webkit-appearance: none;
+        /* prefijjo quepermite la apriencia del select */
+        appearance: none;
+    }
+    
+    textarea {
+        height: 20rem;
+    }
+    
+    .forma-contacto {
+        max-width: 30rem;
+        /*espacio que ocupa seleccion de tel o emai*/
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem;
+        /*align-items: center;centyrado vertical*/
+    }
